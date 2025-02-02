@@ -21,7 +21,7 @@ export default Keyboard
 function MacroBtn({ colId }: { colId: number }) {
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: 'macro'+colId}
+            detail: {key: 'macro'+colId, type: 'macro'}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -70,7 +70,7 @@ function FunctionBtn({ text = "Default", secondary = "2nd", alpha = "A", hidden 
 
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: text}
+            detail: {key: text, type: 'function'}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -96,7 +96,7 @@ function FunctionBtn({ text = "Default", secondary = "2nd", alpha = "A", hidden 
 function AlphaBtn() {
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: 'Alpha'}
+            detail: {key: 'Alpha', type: 'alpha'}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -113,7 +113,7 @@ function SecondaryBtn() {
 
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: '2nd'}
+            detail: {key: '2nd', type: 'secondary'}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -138,7 +138,7 @@ type OperationKeysDef = { text: string, secondary: string, alpha: string }
 function OperationKeys({ text, secondary, alpha }: OperationKeysDef) {
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: text}
+            detail: {key: text, type: 'operation'}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -173,7 +173,7 @@ function NumKey({text}:{text:string}) {
 
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: text}
+            detail: {key: text, type: 'numkey'}
         })
 
         window.dispatchEvent(customKeyPressEvent)

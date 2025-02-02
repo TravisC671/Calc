@@ -119,7 +119,7 @@
         },
         {
             "type": "operation",
-            "text": "%",
+            "text": "/",
             "secondary":"",
             "alpha":""
         },
@@ -134,7 +134,7 @@
         },
         {
             "type": "operation",
-            "text": "X",
+            "text": "*",
             "secondary":"",
             "alpha":""
         },

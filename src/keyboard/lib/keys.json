@@ -1,0 +1,192 @@
+{
+    "keys": [
+        {
+            "type": "secondary"
+        },
+        {
+            "type": "function",
+            "text": "Default",
+            "secondary": "2nd",
+            "alpha": "A"
+        },
+        {
+            "type": "function",
+            "text": "Back",
+            "secondary": "Undo",
+            "alpha": ""
+        },
+        {
+            "type": "arrow"
+        },
+        {
+            "type": "alpha"
+        },
+        {
+            "type": "function",
+            "text": "X",
+            "secondary": "vars",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "Math",
+            "secondary": "Logic",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "Clear",
+            "secondary": "cstm",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "Sin",
+            "secondary": "Sin⁻¹",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "Cos",
+            "secondary": "Cos⁻¹",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "Tan",
+            "secondary": "Tan⁻¹",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "^",
+            "secondary": "pi",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "x²",
+            "secondary": "sqrt",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": "(",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "function",
+            "text": ")",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "operation",
+            "text": "%",
+            "secondary":"",
+            "alpha":""
+        },
+        {
+            "type": "function",
+            "text": "Log",
+            "secondary": "10ˣ",
+            "alpha": ""
+        },
+        {
+            "type": "numKeys"
+        },
+        {
+            "type": "operation",
+            "text": "X",
+            "secondary":"",
+            "alpha":""
+        },
+        {
+            "type": "function",
+            "text": "Ln",
+            "secondary": "eˣ",
+            "alpha": ""
+        },
+        {
+            "type": "operation",
+            "text": "-",
+            "secondary":"",
+            "alpha":""
+        },
+        {
+            "type": "function",
+            "text": "",
+            "secondary": "",
+            "alpha": ""
+        },
+        {
+            "type": "operation",
+            "text": "+",
+            "secondary":"",
+            "alpha":""
+        },
+        {
+            "type": "function",
+            "text": "On/Off",
+            "secondary":"Mode",
+            "alpha":""
+        },
+        {
+            "type": "operation",
+            "text": "=",
+            "secondary":"",
+            "alpha":""
+        }
+    ],
+    "numKeys": [
+        {"text":"7"},
+        {"text":"8"},
+        {"text":"9"},
+        {"text":"4"},
+        {"text":"5"},
+        {"text":"6"},
+        {"text":"1"},
+        {"text":"2"},
+        {"text":"3"},
+        {"text":"0"},
+        {"text":"."},
+        {"text":"-"}
+    ]
+}

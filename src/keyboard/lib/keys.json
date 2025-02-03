@@ -23,7 +23,8 @@
         },
         {
             "id": "alpha",
-            "type": "alpha"
+            "type": "alpha",
+            "secondary": "A-Lock"
         },
         {
             "id": "func_var",

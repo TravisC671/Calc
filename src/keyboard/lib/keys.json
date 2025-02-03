@@ -1,17 +1,20 @@
 {
     "keys": [
         {
+            "id": "secondary",
             "type": "secondary"
         },
         {
+            "id": "func_",
             "type": "function",
             "text": "Default",
             "secondary": "2nd",
             "alpha": "A"
         },
         {
+            "id": "func_backsp",
             "type": "function",
-            "text": "Back",
+            "text": "BackSp",
             "secondary": "Undo",
             "alpha": ""
         },
@@ -19,111 +22,130 @@
             "type": "arrow"
         },
         {
+            "id": "alpha",
             "type": "alpha"
         },
         {
+            "id": "func_var",
             "type": "function",
             "text": "X",
             "secondary": "vars",
             "alpha": ""
         },
         {
+            "id": "func_",
             "type": "function",
             "text": "",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "menu_math",
             "type": "function",
             "text": "Math",
             "secondary": "Logic",
             "alpha": ""
         },
         {
+            "id": "func_",
             "type": "function",
             "text": "",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "func_",
             "type": "function",
             "text": "",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "func_",
             "type": "function",
             "text": "",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "func_clr",
             "type": "function",
             "text": "Clear",
             "secondary": "cstm",
             "alpha": ""
         },
         {
+            "id": "func_",
             "type": "function",
             "text": "",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "func_sin",
             "type": "function",
             "text": "Sin",
             "secondary": "Sin⁻¹",
             "alpha": ""
         },
         {
+            "id": "func_cos",
             "type": "function",
             "text": "Cos",
             "secondary": "Cos⁻¹",
             "alpha": ""
         },
         {
+            "id": "func_tan",
             "type": "function",
             "text": "Tan",
             "secondary": "Tan⁻¹",
             "alpha": ""
         },
         {
+            "id": "func_exp",
             "type": "function",
             "text": "^",
             "secondary": "pi",
             "alpha": ""
         },
         {
+            "id": "func_square",
             "type": "function",
             "text": "x²",
             "secondary": "sqrt",
             "alpha": ""
         },
         {
+            "id": "func_",
             "type": "function",
             "text": "",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "func_lparen",
             "type": "function",
             "text": "(",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "func_rparen",
             "type": "function",
             "text": ")",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "op_div",
             "type": "operation",
             "text": "/",
-            "secondary":"",
-            "alpha":""
+            "secondary": "",
+            "alpha": ""
         },
         {
+            "id": "func_log",
             "type": "function",
             "text": "Log",
             "secondary": "10ˣ",
@@ -133,60 +155,103 @@
             "type": "numKeys"
         },
         {
+            "id": "op_mult",
             "type": "operation",
             "text": "*",
-            "secondary":"",
-            "alpha":""
+            "secondary": "",
+            "alpha": ""
         },
         {
+            "id": "func_ln",
             "type": "function",
             "text": "Ln",
             "secondary": "eˣ",
             "alpha": ""
         },
         {
+            "id": "op_sub",
             "type": "operation",
             "text": "-",
-            "secondary":"",
-            "alpha":""
+            "secondary": "",
+            "alpha": ""
         },
         {
+            "id": "func_",
             "type": "function",
             "text": "",
             "secondary": "",
             "alpha": ""
         },
         {
+            "id": "op_add",
             "type": "operation",
             "text": "+",
-            "secondary":"",
-            "alpha":""
+            "secondary": "",
+            "alpha": ""
         },
         {
+            "id": "sys_on",
             "type": "function",
             "text": "On/Off",
-            "secondary":"Mode",
-            "alpha":""
+            "secondary": "Mode",
+            "alpha": ""
         },
         {
+            "id": "op_enter",
             "type": "operation",
-            "text": "=",
-            "secondary":"",
-            "alpha":""
+            "text": "enter",
+            "secondary": "",
+            "alpha": ""
         }
     ],
     "numKeys": [
-        {"text":"7"},
-        {"text":"8"},
-        {"text":"9"},
-        {"text":"4"},
-        {"text":"5"},
-        {"text":"6"},
-        {"text":"1"},
-        {"text":"2"},
-        {"text":"3"},
-        {"text":"0"},
-        {"text":"."},
-        {"text":"-"}
+        {
+            "id": "num_7",
+            "text": "7"
+        },
+        {
+            "id": "num_8",
+            "text": "8"
+        },
+        {
+            "id": "num_9",
+            "text": "9"
+        },
+        {
+            "id": "num_4",
+            "text": "4"
+        },
+        {
+            "id": "num_5",
+            "text": "5"
+        },
+        {
+            "id": "num_6",
+            "text": "6"
+        },
+        {
+            "id": "num_1",
+            "text": "1"
+        },
+        {
+            "id": "num_2",
+            "text": "2"
+        },
+        {
+            "id": "num_3",
+            "text": "3"
+        },
+        {
+            "id": "num_0",
+            "text": "0"
+        },
+        {
+            "id": "num_per",
+            "text": "."
+        },
+        {
+            "id": "num_neg",
+            "text": "-"
+        }
     ]
 }

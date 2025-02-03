@@ -17,7 +17,7 @@
   --macro-btn-bg-hover: #868686;
   --macro-btn-bg-pressed: #686868;
 
-  --function-btn-bg: #242729;
+  --function-btn-bg: #2f3336;
   --function-btn-bg-hover: #2c2f31;
   --function-btn-bg-pressed: #1a1d1e;
   --function-btn-text: #d2f4ff;
@@ -38,8 +38,8 @@
   --operation-btn-bg: #444450;
   --operation-btn-text: #ffffff;
   
-  --numkey-btn-bg: #e3e3e3;
-  --numkey-btn-bg-hover: #b8b8b8;
+  --numkey-btn-bg: #d3e0e3;
+  --numkey-btn-bg-hover: #e1f1f4;
   --numkey-btn-bg-pressed: #787878;
   --numkey-btn-text: #000000;
   

@@ -21,7 +21,7 @@ export default Keyboard
 function MacroBtn({ colId }: { colId: number }) {
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: 'macro'+colId, type: 'macro'}
+            detail: {key: 'macro_'+colId, type: 'macro'}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -45,13 +45,13 @@ function KeyButtons() {
                 allKeyButtons.push(<AlphaBtn key={index} />)
                 break;
             case 'function':
-                allKeyButtons.push(<FunctionBtn text={item.text} secondary={item.secondary} alpha={item.alpha} hidden={false} key={index} />)
+                allKeyButtons.push(<FunctionBtn text={item.text!} secondary={item.secondary!} alpha={item.alpha!} keyID={item.id!} hidden={false} key={index} />)
                 break;
             case 'arrow':
                 allKeyButtons.push(<ArrowBtns key={index} />)
                 break;
             case 'operation':
-                allKeyButtons.push(<OperationKeys text={item.text!} secondary={item.secondary!} alpha={item.alpha!} key={index} />)
+                allKeyButtons.push(<OperationKeys text={item.text!} secondary={item.secondary!} alpha={item.alpha!} keyID={item.id!} key={index} />)
                 break;
             case 'numKeys':
                 allKeyButtons.push(<NumKeyContainer key={index} />)
@@ -66,11 +66,12 @@ function KeyButtons() {
     )
 }
 
-function FunctionBtn({ text = "Default", secondary = "2nd", alpha = "A", hidden = true }) {
+type FunctionBtnType = {text: string, secondary:string, alpha:string, keyID:string, hidden:boolean}
+function FunctionBtn({ text = "Default", secondary = "2nd", alpha = "A", keyID, hidden = true }:FunctionBtnType) {
 
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: text, type: 'function'}
+            detail: {key: keyID}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -96,7 +97,7 @@ function FunctionBtn({ text = "Default", secondary = "2nd", alpha = "A", hidden 
 function AlphaBtn() {
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: 'Alpha', type: 'alpha'}
+            detail: {key: 'alpha'}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -113,7 +114,7 @@ function SecondaryBtn() {
 
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: '2nd', type: 'secondary'}
+            detail: {key: 'secondary'}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -134,11 +135,11 @@ function ArrowBtns() {
     )
 }
 
-type OperationKeysDef = { text: string, secondary: string, alpha: string }
-function OperationKeys({ text, secondary, alpha }: OperationKeysDef) {
+type OperationKeysDef = { text: string, secondary: string, alpha: string, keyID: string }
+function OperationKeys({ text, secondary, alpha, keyID }: OperationKeysDef) {
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: text, type: 'operation'}
+            detail: {key: keyID}
         })
 
         window.dispatchEvent(customKeyPressEvent)
@@ -158,7 +159,7 @@ function NumKeyContainer() {
     let keys:JSX.Element[] = []
 
     Jkeys.numKeys.forEach((item, index) => {
-        keys.push(<NumKey text={item.text} key={index}/>)
+        keys.push(<NumKey text={item.text} key={index} keyID={item.id}/>)
     })
 
 
@@ -169,11 +170,12 @@ function NumKeyContainer() {
     )
 }
 
-function NumKey({text}:{text:string}) {
+type numKeyType = {text:string, keyID: string}
+function NumKey({text, keyID}:numKeyType) {
 
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: text, type: 'numkey'}
+            detail: {key: keyID}
         })
 
         window.dispatchEvent(customKeyPressEvent)

@@ -2,6 +2,14 @@ import { useEffect, useState } from 'react'
 import './ViewScreen.css'
 import { evaluate } from 'mathjs'
 
+const opMap:Record<string,string> = {
+    add: "+",
+    sub: "-",
+    mult: "*",
+    div: "/",
+}
+
+
 function ViewScreen() {
 
     const [expression, setExpression ] = useState(' ')
@@ -11,15 +19,20 @@ function ViewScreen() {
     //TODO currently using js eval, but I want to create my own system
     useEffect(() => {
         const handleButtonClick = (event:any) => {
-            switch (event.detail.type) {
-                case ('numkey'):
+            let keyID:string[] = event.detail.key.split('_')
+
+            let type = keyID[0]
+            let key = keyID[1]
+
+            switch (type) {
+                case ('num'):
                     console.log('numkey', event.detail.key)
-                    setExpression((prev) => prev + event.detail.key)
+                    setExpression((prev) => prev + key)
                     break
-                case ('operation'):
+                case ('op'):
                     console.log('operation')
-                    if (event.detail.key != '=') {
-                        setExpression((prev) => prev + event.detail.key)
+                    if (key != 'enter') {
+                        setExpression((prev) => prev + opMap[key])
                     } else {
                         setExpression((prevExpr) => {
                             let res;

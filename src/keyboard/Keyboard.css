@@ -154,6 +154,10 @@
     background-color: var(--operation-btn-bg);
 }
 
+.operation-btn-text {
+    color: var(--operation-btn-text);
+}
+
 .numkey-btn-container {
     display: grid;
     grid-template-columns: repeat(3, 64px);

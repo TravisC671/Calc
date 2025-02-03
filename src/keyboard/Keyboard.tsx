@@ -149,7 +149,7 @@ function OperationKeys({ text, secondary, alpha }: OperationKeysDef) {
                 <h3 className='function-text-sm alpha'>{alpha}</h3>
                 <h3 className='function-text-sm secondary'>{secondary}</h3>
             </div>
-            <h1 className='function-btn-text'>{text}</h1>
+            <h1 className='function-btn-text operation-btn-text'>{text}</h1>
         </button>
     )
 }

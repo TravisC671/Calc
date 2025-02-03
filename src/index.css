@@ -17,26 +17,27 @@
   --macro-btn-bg-hover: #868686;
   --macro-btn-bg-pressed: #686868;
 
-  --function-btn-bg: #C4C4C4;
+  --function-btn-bg: #9aa4aa;
   --function-btn-bg-hover: #cdcdcd;
   --function-btn-bg-pressed: #adadad;
   
-  --alpha-text: #40B16B;
-  --secondary-text: #0B1697;
+  --alpha-text: #40dd7c;
+  --secondary-text: #004a7f;
   
-  --alpha-btn-bg: #3DE47D;
+  --alpha-btn-bg: #2daa5d;
   --alpha-btn-bg-hover: #63ff9f;
   --alpha-btn-bg-pressed: #24bb5e;
-  --alpha-btn-text: #1A703B;
+  --alpha-btn-text: #ffffff;
   
-  --secondary-btn-bg: #4DCEFC;
+  --secondary-btn-bg: #403c9d;
   --secondary-btn-bg-hover: #83deff;
   --secondary-btn-bg-pressed: #38acd6;
-  --secondary-btn-text: #575DA0;
+  --secondary-btn-text: #ffffff;
   
-  --operation-btn-bg: #A4A4A4;
+  --operation-btn-bg: #444450;
+  --operation-btn-text: #ffffff;
   
-  --numkey-btn-bg: #9F9F9F;
+  --numkey-btn-bg: #e3e3e3;
   --numkey-btn-bg-hover: #b8b8b8;
   --numkey-btn-bg-pressed: #787878;
   --numkey-btn-text: #000000;

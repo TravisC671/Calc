@@ -22,8 +22,13 @@ function ViewScreen() {
                         setExpression((prev) => prev + event.detail.key)
                     } else {
                         setExpression((prevExpr) => {
-                            console.log('setexpr')
-                            setPastExpr((prev) => [...prev, <PastExpression expr={prevExpr} res={evaluate(prevExpr)} key={prev.length} />])
+                            let res;
+                            try {
+                                res = evaluate(prevExpr)
+                            } catch {
+                                res = 'error'
+                            }
+                            setPastExpr((prev) => [...prev, <PastExpression expr={prevExpr} res={res} key={prev.length} />])
 
                             return ' '
                         })

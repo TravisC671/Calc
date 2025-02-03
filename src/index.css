@@ -17,22 +17,23 @@
   --macro-btn-bg-hover: #868686;
   --macro-btn-bg-pressed: #686868;
 
-  --function-btn-bg: #9aa4aa;
-  --function-btn-bg-hover: #cdcdcd;
-  --function-btn-bg-pressed: #adadad;
+  --function-btn-bg: #242729;
+  --function-btn-bg-hover: #2c2f31;
+  --function-btn-bg-pressed: #1a1d1e;
+  --function-btn-text: #d2f4ff;
   
   --alpha-text: #40dd7c;
-  --secondary-text: #004a7f;
+  --secondary-text: #fd7ffd;
   
-  --alpha-btn-bg: #2daa5d;
+  --alpha-btn-bg: #40dd7c;
   --alpha-btn-bg-hover: #63ff9f;
   --alpha-btn-bg-pressed: #24bb5e;
-  --alpha-btn-text: #ffffff;
+  --alpha-btn-text: #2a463a;
   
-  --secondary-btn-bg: #403c9d;
-  --secondary-btn-bg-hover: #83deff;
-  --secondary-btn-bg-pressed: #38acd6;
-  --secondary-btn-text: #ffffff;
+  --secondary-btn-bg: #e47ae2;
+  --secondary-btn-bg-hover: #ef83ee;
+  --secondary-btn-bg-pressed: #d672d4;
+  --secondary-btn-text: #42243c;
   
   --operation-btn-bg: #444450;
   --operation-btn-text: #ffffff;

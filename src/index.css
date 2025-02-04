@@ -13,37 +13,27 @@
   -moz-osx-font-smoothing: grayscale;
 
   --case-color: #D9D9D9;
-  --macro-btn-bg: #797979;
-  --macro-btn-bg-hover: #868686;
-  --macro-btn-bg-pressed: #686868;
+  --case-img: url(./assets/splatoon3-pattern-02-2560x1440-1.webp);
+  
+  --macro-btn-bg: #d3e0e3;
 
   --function-btn-bg: #2f3336;
-  --function-btn-bg-hover: #2c2f31;
-  --function-btn-bg-pressed: #1a1d1e;
   --function-btn-text: #d2f4ff;
   
-  --alpha-text: #40dd7c;
-  --secondary-text: #fd7ffd;
+  --alpha-text: #4fffbc;
+  --secondary-text: #ff6ed1;
   
-  --alpha-btn-bg: #40dd7c;
-  --alpha-btn-bg-hover: #63ff9f;
-  --alpha-btn-bg-pressed: #24bb5e;
+  --alpha-btn-bg: #4fffbc;
   --alpha-btn-text: #2a463a;
   
-  --secondary-btn-bg: #e47ae2;
-  --secondary-btn-bg-hover: #ef83ee;
-  --secondary-btn-bg-pressed: #d672d4;
+  --secondary-btn-bg: #ff6ed1;
   --secondary-btn-text: #42243c;
   
   --operation-btn-bg: #444450;
   --operation-btn-text: #ffffff;
   
   --numkey-btn-bg: #d3e0e3;
-  --numkey-btn-bg-hover: #e1f1f4;
-  --numkey-btn-bg-pressed: #787878;
   --numkey-btn-text: #000000;
-  
-  --main: #000000;
 }
 
 a {
@@ -93,4 +83,12 @@ button {
   button {
     background-color: #f9f9f9;
   }
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+button:active {
+  filter: brightness(.9);
 }

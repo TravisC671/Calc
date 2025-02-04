@@ -9,7 +9,7 @@
 
 .case {
   padding: 30px;
+  background-image: var(--case-img);
   background-color: var(--case-color);
   border-radius: 20px;
-  background-image: url(./assets/splatoon3-pattern-02-2560x1440-1.webp);
 }

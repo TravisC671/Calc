@@ -114,7 +114,7 @@ function SecondaryBtn() {
 
     const handleClick = () => {
         const customKeyPressEvent = new CustomEvent('CustomKeyPress', {
-            detail: {key: 'secondary'}
+            detail: {key: 'second'}
         })
 
         window.dispatchEvent(customKeyPressEvent)

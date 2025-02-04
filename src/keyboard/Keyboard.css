@@ -6,14 +6,6 @@
     border-radius: 5px;
 }
 
-.macro-btn:hover {
-    background-color: var(--macro-btn-bg-hover);
-}
-
-.macro-btn:active {
-    background-color: var(--macro-btn-bg-pressed);
-}
-
 .keyboard-container {
     height: fit-content;
     
@@ -35,14 +27,6 @@
     align-items: center;
     justify-content: center;
     padding: 0px 5px 0px 5px;
-}
-
-.function-btn:hover {
-    background-color: var(--function-btn-bg-hover);
-}
-
-.function-btn:active {
-    background-color: var(--function-btn-bg-pressed);
 }
 
 .function-btn-text {
@@ -96,14 +80,6 @@
     transition: .2s;
 }
 
-.alpha-btn:hover {
-    background-color: var(--alpha-btn-bg-hover);
-}
-
-.alpha-btn:active {
-    background-color: var(--alpha-btn-bg-pressed);
-}
-
 .alpha-text {
     color: var(--alpha-btn-text);
     margin: 0px;
@@ -120,15 +96,6 @@
     justify-content: center;
     border-radius: 5px;
 }
-
-.secondary-btn:hover {
-    background-color: var(--secondary-btn-bg-hover);
-}
-
-.secondary-btn:active {
-    background-color: var(--secondary-btn-bg-pressed);
-}
-
 
 .secondary-text {
     color: var(--secondary-btn-text);
@@ -175,12 +142,4 @@
     border-radius: 5px;
     color: var(--numkey-btn-text);
     transition: .2s;
-}
-
-.numkey-btn:hover {
-    background-color: var(--numkey-btn-bg-hover);
-}
-
-.numkey-btn:active {
-    background-color: var(--numkey-btn-bg-pressed);
 }

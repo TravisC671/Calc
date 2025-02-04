@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './ViewScreen.css'
 import { evaluate } from 'mathjs'
 import { sciKeys, calcState } from './lib/keys'
@@ -7,53 +7,65 @@ function ViewScreen() {
 
     const [expression, setExpression] = useState(' ')
 
-    const [pastExpr, setPastExpr] = useState<JSX.Element[]>([])
+
+    const pastExprRef = useRef<JSX.Element[]>([])
+
 
     //TODO currently using js eval, but I want to create my own system
     useEffect(() => {
         const handleButtonClick = (event: any) => {
 
-            if (event.detail.key == "op_enter") {
-                setExpression((prevExpr) => {
+            setExpression(prevExpr => {
+                if (event.detail.key == "op_enter") {
                     let res;
                     try {
-                        res = evaluate(prevExpr)
+                        res = evaluate(prevExpr,)
                     } catch {
                         res = 'error'
                     }
-                    setPastExpr((prev) => [...prev, <PastExpression expr={prevExpr} res={res} key={prev.length} />])
+
+                    pastExprRef.current.push(<PastExpression expr={prevExpr} res={res} key={pastExprRef.current.length} />);
 
                     return ''
-                })
-            } else {
-                setExpression((prev) => {
+                }
+                else {
 
                     let state: calcState = {
-                        input: prev,
+                        input: prevExpr,
                         alpha: false,
                         second: false
                     }
-                    return sciKeys[event.detail.key].onPress(state)
-                })
-                
-            }
+
+                    let result;
+
+                    try {
+                        result = sciKeys[event.detail.key].onPress(state)
+                    } catch {
+                        console.error(`${event.detail.key} not defined`)
+                        result = prevExpr
+                    }
+
+                    return result
+                }
+            })
+
         }
 
         window.addEventListener('CustomKeyPress', handleButtonClick)
 
         return () => {
-            window.removeEventListener('CustomKeyPress', handleButtonClick)
-        }
-    }, [])
+        window.removeEventListener('CustomKeyPress', handleButtonClick)
+    }
+}, [])
 
 
 
-    return (
-        <div className="screen-container">
-            <h1 className='screen-input'>{expression}</h1>
-            <div className='past-contianer'>{pastExpr}</div>
-        </div>
-    )
+return (
+    <div className="screen-container">
+        <h1 className='screen-input'>{expression}</h1>
+        <div className='past-contianer'>{pastExprRef.current}</div>
+    </div>
+)
 }
 
 function PastExpression({ expr, res }: { expr: string, res: string }) {

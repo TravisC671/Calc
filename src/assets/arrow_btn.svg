@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 106 106">
+  <!-- Generator: Adobe Illustrator 29.2.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 116)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        display: none;
+      }
+
+      .st0, .st2 {
+        fill: none;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .st3 {
+        fill: #d3eef9;
+      }
+
+      .st4 {
+        fill: #2f3336;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1" class="st1">
+    <rect class="st2" x="3" y="3" width="100" height="100"/>
+    <rect class="st2" x="48" y="-37" width="10" height="180" transform="translate(53 -21.95) rotate(45)"/>
+    <rect class="st2" x="48" y="-37" width="10" height="180" transform="translate(-21.95 53) rotate(-45)"/>
+    <rect class="st2" x="26.67" y="26.67" width="52.66" height="52.66"/>
+    <rect class="st2" x="-59.08" y="15.34" width="10" height="180"/>
+    <rect class="st2" x="36.67" y="36.67" width="32.66" height="32.66"/>
+  </g>
+  <g id="Layer_2">
+    <rect class="st0" x="26.67" y="26.67" width="52.66" height="52.66"/>
+    <rect class="st4" x="35.69" y="35.69" width="34.62" height="34.62" rx="2.5" ry="2.5"/>
+    <g>
+      <path class="st4" d="M24.32,31.81L4.52,12.01c-1.67-1.67-4.52-.49-4.52,1.87v78.23c0,2.36,2.85,3.54,4.52,1.87l19.8-19.8c.5-.5.77-1.17.77-1.87v-38.64c0-.7-.28-1.37-.77-1.87Z"/>
+      <polygon class="st3" points="7.88 53 17.21 60.29 17.21 45.71 7.88 53"/>
+    </g>
+    <g>
+      <path class="st4" d="M80.91,33.68v38.64c0,.7.28,1.37.77,1.87l19.8,19.8c1.67,1.67,4.52.49,4.52-1.87V13.88c0-2.36-2.85-3.54-4.52-1.87l-19.8,19.8c-.5.5-.77,1.17-.77,1.87Z"/>
+      <polygon class="st3" points="98.12 53 88.79 60.29 88.79 45.71 98.12 53"/>
+    </g>
+    <g>
+      <path class="st4" d="M72.32,80.91h-38.64c-.7,0-1.37.28-1.87.77l-19.8,19.8c-1.67,1.67-.49,4.52,1.87,4.52h78.23c2.36,0,3.54-2.85,1.87-4.52l-19.8-19.8c-.5-.5-1.17-.77-1.87-.77Z"/>
+      <polygon class="st3" points="53 98.12 45.71 88.79 60.29 88.79 53 98.12"/>
+    </g>
+    <g>
+      <path class="st4" d="M74.19,24.32l19.8-19.8C95.65,2.85,94.47,0,92.12,0H13.88C11.53,0,10.35,2.85,12.01,4.52l19.8,19.8c.5.5,1.17.77,1.87.77h38.64c.7,0,1.37-.28,1.87-.77Z"/>
+      <polygon class="st3" points="53 7.88 45.71 17.21 60.29 17.21 53 7.88"/>
+    </g>
+  </g>
+</svg>

@@ -1,145 +1,162 @@
-
 .macro-btn {
-    width: 64px;
-    height: 28px;
-    background-color: var(--macro-btn-bg);
-    border-radius: 5px;
+  width: 64px;
+  height: 28px;
+  background-color: var(--macro-btn-bg);
+  border-radius: 5px;
 }
 
 .keyboard-container {
-    height: fit-content;
-    
+  height: fit-content;
 }
 
 .macro-container {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 7px;
 }
 
 .function-btn {
-    background-color: var(--function-btn-bg);
-    height: 45px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 5px 0px 5px;
+  background-color: var(--function-btn-bg);
+  height: 45px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px 0px 5px;
 }
 
 .function-btn-text {
-    font-size: 15px;
-    text-align: center;
-    margin: 4px 0px 0px 0px;
-    color: var(--function-btn-text);
-    
+  font-size: 15px;
+  text-align: center;
+  margin: 4px 0px 0px 0px;
+  color: var(--function-btn-text);
 }
 
 .function-text-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 2px 5px 0px 5px;
-    font-size: 12px;
-    margin: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 5px 0px 5px;
+  font-size: 12px;
+  margin: 0px;
 }
 
 .function-text-sm {
-    font-size: 12px;
-    margin: 0px;
-    height: 12px;
+  font-size: 12px;
+  margin: 0px;
+  height: 12px;
 }
 
 .alpha {
-    text-align: left;
-    color: var(--alpha-text);
+  text-align: left;
+  color: var(--alpha-text);
 }
 
 .secondary {
-    text-align: right;
-    color: var(--secondary-text);
+  text-align: right;
+  color: var(--secondary-text);
 }
 
 .key-buttons {
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: repeat(5, 64px);
-    gap: 10px
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 64px);
+  gap: 10px;
 }
 
 .alpha-btn {
-    background-color: var(--alpha-btn-bg);
-    width: 64px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    transition: .2s;
+  background-color: var(--alpha-btn-bg);
+  width: 64px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: 0.2s;
 }
 
 .alpha-text {
-    color: var(--alpha-btn-text);
-    margin: 0px;
-    font-size: 20px;
-    
+  color: var(--alpha-btn-text);
+  margin: 0px;
+  font-size: 20px;
 }
 
 .secondary-btn {
-    background-color: var(--secondary-btn-bg);
-    width: 64px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+  background-color: var(--secondary-btn-bg);
+  width: 64px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .secondary-text {
-    color: var(--secondary-btn-text);
-    margin: 0px;
-    font-size: 20px;
-    
-}
-
-.arrow-container {
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    background-color: rgb(56, 56, 56);
+  color: var(--secondary-btn-text);
+  margin: 0px;
+  font-size: 20px;
 }
 
 .sup {
-    vertical-align: super;
-    font-size: 50%;
+  vertical-align: super;
+  font-size: 50%;
 }
 
 .operation-btn {
-    background-color: var(--operation-btn-bg);
+  background-color: var(--operation-btn-bg);
 }
 
 .operation-btn-text {
-    color: var(--operation-btn-text);
+  color: var(--operation-btn-text);
 }
 
 .numkey-btn-container {
-    display: grid;
-    grid-template-columns: repeat(3, 64px);
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 6;
-    grid-row-end: 11;
-    gap:10px;    
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 11;
+  gap: 10px;
 }
 
 .numkey-btn {
-    width: 64px;
-    height: 51px;
-    background-color: var(--numkey-btn-bg);
-    border-radius: 5px;
-    color: var(--numkey-btn-text);
-    transition: .2s;
+  width: 64px;
+  height: 51px;
+  background-color: var(--numkey-btn-bg);
+  border-radius: 5px;
+  color: var(--numkey-btn-text);
+  transition: 0.2s;
+}
+
+.arrow-container {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 103px;
+}
+
+.arrow-svg {
+  height: 103px;
+}
+
+.arrow-symbol {
+  fill: var(--function-btn-text);
+  pointer-events: none;
+}
+
+.arrow-bg {
+  cursor: "pointer";
+  fill: var(--function-btn-bg);
+}
+
+.arrow-bg:hover {
+  filter: brightness(1.2);
+}
+
+.arrow-bg:active {
+  filter: brightness(0.9);
 }

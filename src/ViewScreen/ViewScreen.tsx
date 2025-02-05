@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import "./ViewScreen.css";
 import { evaluate } from "mathjs";
 import { sciKeys, calcState } from "./lib/keys";
+import { addStyles, StaticMathField } from "react-mathquill";
+
+addStyles();
 
 function ViewScreen() {
   const [expression, setExpression] = useState<calcState>({
@@ -62,17 +65,27 @@ function ViewScreen() {
 
   return (
     <div className="screen-container">
+      <div className="macro-disp-container">
+        <MacroDisp type="left" text="graph" />
+        <MacroDisp type="middle" text="f<->d" />
+        <MacroDisp type="middle" text="" />
+        <MacroDisp type="middle" text="" />
+        <MacroDisp type="right" text="" />
+      </div>
       <div className="input-container">
-        <h1 className="screen-input">
+        {/* <h1 className="screen-input">
           {expression.input.substring(0, expression.cursorPos)}
+        </h1> */}
+        <h1 className="math-text-input">
+          <StaticMathField>{expression.input}</StaticMathField>
         </h1>
-        <div className="screen-cursor"></div>
+        {/* <div className="screen-cursor"></div>
         <h1 className="screen-input">
           {expression.input.substring(
             expression.cursorPos,
             expression.input.length
           )}
-        </h1>
+        </h1> */}
       </div>
       <div className="past-contianer">{pastExprRef.current}</div>
     </div>
@@ -86,6 +99,14 @@ function PastExpression({ expr, res }: { expr: string; res: string }) {
       <h3 className="past-expr-res">{res}</h3>
     </div>
   );
+}
+
+const macroType = ["left", "middle", "right"] as const;
+
+type MacroType = (typeof macroType)[number];
+
+function MacroDisp({ type, text }: { type: MacroType; text: string }) {
+  return <div className={`macro-disp macro-${type}`}>{text}</div>;
 }
 
 export default ViewScreen;

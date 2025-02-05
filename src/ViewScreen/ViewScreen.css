@@ -24,7 +24,7 @@
 
 .screen-cursor {
   height: 48px;
-  width: 5px;
+  width: 2px;
   background-color: white;
   margin: 0px 5px 0px 5px;
   animation: cursorblink 1.5s infinite steps(2, start);
@@ -57,4 +57,36 @@
 .past-contianer {
   display: flex;
   flex-direction: column;
+}
+
+.macro-disp {
+  border-top: white 2px solid;
+  height: 25px;
+}
+
+.macro-left {
+  border-right: white 2px solid;
+  width: 69px;
+  border-radius: 0px 5px 0px 0px;
+}
+.macro-middle {
+  border-right: white 2px solid;
+  border-left: white 2px solid;
+  width: 74px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.macro-right {
+  border-left: white 2px solid;
+  width: 69px;
+  border-radius: 5px 0px 0px 0px;
+}
+
+.macro-disp-container {
+  display: flex;
+}
+
+.math-text-input {
+  margin: 0px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }

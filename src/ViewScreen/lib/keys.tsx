@@ -54,8 +54,12 @@ class key {
       let newCursor = state.cursorPos + action.length;
 
       if (newInput.slice(-1) == "(") {
-        newInput += ")";
+        newInput += "\\right)";
       }
+      if (newInput.slice(-1) == "{") {
+        newInput += "}";
+      }
+
       result = {
         ...state,
         input: newInput,
@@ -134,6 +138,11 @@ function handleCstmMenu(state: calcState): calcState {
   return state;
 }
 
+function handleDiv(state: calcState): calcState {
+  //open a menu that allows users to customize their calculator
+  return state;
+}
+
 function handleOnOff(state: calcState): calcState {
   //open a menu that allows users to customize their calculator
   return state;
@@ -190,15 +199,15 @@ const sciKeys: Record<string, key> = {
   func_var: new key(handleCurVar, handleVars),
   menu_math: new key(handleMathMenu, handleLogicMenu),
   func_clr: new key(handleclear, handleCstmMenu),
-  func_sin: new key("sin(", "arcsin("),
-  func_cos: new key("cos(", "arccos("),
-  func_tan: new key("tan(", "arctan("),
-  func_exp: new key("^", "pi"),
-  func_square: new key("^2", "sqrt("),
-  func_lparen: new key("("),
-  func_rparen: new key(")"),
-  op_div: new key("/"),
-  func_log: new key("log(", "10^{"),
+  func_sin: new key("\\sin\\left(", "\\arcsin\\left("),
+  func_cos: new key("\\cos\\left(", "\\arccos\\left("),
+  func_tan: new key("\\tan\\left(", "\\arctan\\left("),
+  func_exp: new key("^{", "pi"),
+  func_square: new key("^2", "\\sqrt[2]{"),
+  func_lparen: new key("left("),
+  func_rparen: new key("\right)"),
+  op_div: new key(handleDiv),
+  func_log: new key("\\log\\left(", "10^{"),
 
   num_7: new key("7"),
   num_8: new key("8"),
@@ -213,8 +222,8 @@ const sciKeys: Record<string, key> = {
   num_per: new key("."),
   num_neg: new key("-"), //might want to make it a diff symbol than the subtract but fine for now
 
-  op_mult: new key("*"),
-  func_ln: new key("ln(", "e^{"),
+  op_mult: new key("\\cdot"),
+  func_ln: new key("\\ln\\(", "e^{"),
 
   op_sub: new key("-"),
   op_add: new key("+"),

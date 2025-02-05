@@ -177,9 +177,9 @@
             "alpha": ""
         },
         {
-            "id": "func_",
+            "id": "func_sto",
             "type": "function",
-            "text": "",
+            "text": "->",
             "secondary": "",
             "alpha": ""
         },

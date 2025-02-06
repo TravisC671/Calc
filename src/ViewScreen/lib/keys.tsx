@@ -3,6 +3,7 @@
 
 type calcState = {
   input: string;
+  inputHist: string[];
   cursorPos: number;
   alpha: boolean;
   second: boolean;
@@ -29,15 +30,26 @@ class key {
   }
 
   onPress(state: calcState): calcState {
+    let result;
     if (state.second) {
       state.second = false;
-      return this.handleMod(state, this.Second);
+      result = this.handleMod(state, this.Second);
     } else if (state.alpha) {
       state.alpha = false;
-      return this.handleMod(state, this.Alpha);
+      result = this.handleMod(state, this.Alpha);
     } else {
-      return this.handleMod(state, this.Norm);
+      result = this.handleMod(state, this.Norm);
     }
+
+    //only add to the history if its unique
+    let isNew =
+      result.inputHist.length === 0 || result.inputHist[0] != result.input;
+    let isLarger = state.inputHist.length <= result.inputHist.length;
+    if (isNew && isLarger) {
+      console.log("added to array");
+      result.inputHist.unshift(result.input);
+    }
+    return result;
   }
 
   handleMod(state: calcState, action: string | keyFunction): calcState {
@@ -53,8 +65,10 @@ class key {
         state.input.substring(state.cursorPos, state.input.length);
       let newCursor = state.cursorPos + action.length;
 
-      if (newInput.slice(-1) == "(") {
+      if (action.slice(-1) == "(") {
         newInput += ")";
+      } else if (action.slice(-1) == "{") {
+        newInput += "}";
       }
       result = {
         ...state,
@@ -80,13 +94,26 @@ function handleSecond(state: calcState): calcState {
 }
 
 function handleBacksp(state: calcState): calcState {
-  //remove the last item in the string/token
-  return state;
+  let newState = {
+    ...state,
+    input: state.input.slice(0, -1),
+  };
+  return newState;
 }
 
 function handleUndo(state: calcState): calcState {
-  //get the undo list from the state
-  return state;
+  let newState = { ...state, inputHist: [...state.inputHist] };
+
+  if (newState.inputHist.length > 1) {
+    newState.input = newState.inputHist[1];
+    newState.inputHist.shift();
+  } else {
+    newState.input = "";
+    newState.inputHist = [];
+  }
+
+  console.log(state, newState);
+  return newState;
 }
 
 function handleAlpha(state: calcState): calcState {
@@ -193,12 +220,12 @@ const sciKeys: Record<string, key> = {
   func_sin: new key("sin(", "arcsin("),
   func_cos: new key("cos(", "arccos("),
   func_tan: new key("tan(", "arctan("),
-  func_exp: new key("^", "pi"),
+  func_exp: new key("^(", "pi"),
   func_square: new key("^2", "sqrt("),
   func_lparen: new key("("),
   func_rparen: new key(")"),
   op_div: new key("/"),
-  func_log: new key("log(", "10^{"),
+  func_log: new key("log(", "10^("),
 
   num_7: new key("7"),
   num_8: new key("8"),
@@ -214,7 +241,7 @@ const sciKeys: Record<string, key> = {
   num_neg: new key("-"), //might want to make it a diff symbol than the subtract but fine for now
 
   op_mult: new key("*"),
-  func_ln: new key("ln(", "e^{"),
+  func_ln: new key("ln(", "e^("),
 
   op_sub: new key("-"),
   op_add: new key("+"),

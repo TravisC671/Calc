@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import "./ViewScreen.css";
-import { evaluate } from "mathjs";
+import { composition, evaluate } from "mathjs";
 import { sciKeys, calcState } from "./lib/keys";
 
 function ViewScreen() {
   const [expression, setExpression] = useState<calcState>({
     input: "",
+    inputHist: [],
     cursorPos: 0,
     alpha: false,
     second: false,

@@ -89,6 +89,8 @@ function PastExpression({ expr, res }: { expr: string; res: string }) {
   );
 }
 
-function ModeDisplay({ state }: { state: calcState }) {}
+function ModeDisplay({ state }: { state: calcState }) {
+  // I want to include the radian, time, 2nd and alpha state
+}
 
 export default ViewScreen;

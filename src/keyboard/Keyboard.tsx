@@ -1,10 +1,12 @@
 import "./Keyboard.css";
+import KeyboardInput from "./lib/KeyboardInput";
 import Jkeys from "./lib/keys.json";
 
 function Keyboard() {
   let cols = [0, 1, 2, 3, 4];
   return (
     <div className="keyboard-container">
+      <KeyboardInput />
       <div className="macro-container">
         {cols.map((value, index) => (
           <MacroBtn colId={value} key={index} />
@@ -14,8 +16,6 @@ function Keyboard() {
     </div>
   );
 }
-
-export default Keyboard;
 
 function MacroBtn({ colId }: { colId: number }) {
   const handleClick = () => {
@@ -272,3 +272,5 @@ function ArrowBtns() {
     </div>
   );
 }
+
+export default Keyboard;

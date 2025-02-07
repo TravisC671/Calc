@@ -46,7 +46,6 @@ class key {
       result.inputHist.length === 0 || result.inputHist[0] != result.input;
     let isLarger = state.inputHist.length <= result.inputHist.length;
     if (isNew && isLarger) {
-      console.log("added to array");
       result.inputHist.unshift(result.input);
     }
     return result;
@@ -112,7 +111,6 @@ function handleUndo(state: calcState): calcState {
     newState.inputHist = [];
   }
 
-  console.log(state, newState);
   return newState;
 }
 

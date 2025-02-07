@@ -89,4 +89,6 @@ function PastExpression({ expr, res }: { expr: string; res: string }) {
   );
 }
 
+function ModeDisplay({ state }: { state: calcState }) {}
+
 export default ViewScreen;

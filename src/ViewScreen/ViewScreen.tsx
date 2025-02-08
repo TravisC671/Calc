@@ -94,3 +94,4 @@ function ModeDisplay({ state }: { state: calcState }) {
 }
 
 export default ViewScreen;
+//sick today, cant brogram ;-;
